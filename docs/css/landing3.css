@@ -1,0 +1,121 @@
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: rgb(64, 0, 148);
+  color: rgb(64, 0, 148);
+  box-shadow: 9999px 0 0 -1px rgb(64, 0, 148);
+  -webkit-animation: dot-pulse 2.5s infinite linear;
+  animation: dot-pulse 2.5s infinite linear;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: rgb(64, 0, 148);
+  color: rgb(64, 0, 148);
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px rgb(64, 0, 148);
+  -webkit-animation: dot-pulse-before 2.5s infinite linear;
+  animation: dot-pulse-before 2.5s infinite linear;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px rgb(64, 0, 148);
+  -webkit-animation: dot-pulse-after 2.5s infinite linear;
+  animation: dot-pulse-after 2.5s infinite linear;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px rgb(64, 0, 148);
+  }
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px rgb(64, 0, 148);
+  }
+}
+
+@-webkit-keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px rgb(64, 0, 148);
+  }
+}
+
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px rgb(64, 0, 148);
+  }
+}
+
+@-webkit-keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px rgb(64, 0, 148);
+  }
+}
+
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px rgb(64, 0, 148);
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px rgb(64, 0, 148);
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px rgb(64, 0, 148);
+  }
+}
